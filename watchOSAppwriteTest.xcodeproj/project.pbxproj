@@ -15,6 +15,10 @@
 		D35B74DA298095C700F98647 /* watchOSAppwriteTest_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B74D9298095C700F98647 /* watchOSAppwriteTest_Watch_AppTests.swift */; };
 		D35B74E4298095C700F98647 /* watchOSAppwriteTest_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B74E3298095C700F98647 /* watchOSAppwriteTest_Watch_AppUITests.swift */; };
 		D35B74E6298095C700F98647 /* watchOSAppwriteTest_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B74E5298095C700F98647 /* watchOSAppwriteTest_Watch_AppUITestsLaunchTests.swift */; };
+		D35B74FA2980A39A00F98647 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D35B74F92980A39A00F98647 /* GoogleService-Info.plist */; };
+		D35B750C2980A5FB00F98647 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D35B750B2980A5FB00F98647 /* FirebaseAuth */; };
+		D35B750E2980A5FB00F98647 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D35B750D2980A5FB00F98647 /* FirebaseDatabase */; };
+		D35B75102980A5FB00F98647 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D35B750F2980A5FB00F98647 /* FirebaseDatabaseSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,7 @@
 		D35B74DF298095C700F98647 /* watchOSAppwriteTest Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "watchOSAppwriteTest Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35B74E3298095C700F98647 /* watchOSAppwriteTest_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchOSAppwriteTest_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		D35B74E5298095C700F98647 /* watchOSAppwriteTest_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchOSAppwriteTest_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D35B74F92980A39A00F98647 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35B75102980A5FB00F98647 /* FirebaseDatabaseSwift in Frameworks */,
+				D35B750E2980A5FB00F98647 /* FirebaseDatabase in Frameworks */,
+				D35B750C2980A5FB00F98647 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +126,7 @@
 		D35B74C7298095C600F98647 /* watchOSAppwriteTest Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				D35B74F92980A39A00F98647 /* GoogleService-Info.plist */,
 				D35B74C8298095C600F98647 /* watchOSAppwriteTestApp.swift */,
 				D35B74CA298095C600F98647 /* ContentView.swift */,
 				D35B74CC298095C700F98647 /* Assets.xcassets */,
@@ -184,6 +193,11 @@
 			dependencies = (
 			);
 			name = "watchOSAppwriteTest Watch App";
+			packageProductDependencies = (
+				D35B750B2980A5FB00F98647 /* FirebaseAuth */,
+				D35B750D2980A5FB00F98647 /* FirebaseDatabase */,
+				D35B750F2980A5FB00F98647 /* FirebaseDatabaseSwift */,
+			);
 			productName = "watchOSAppwriteTest Watch App";
 			productReference = D35B74C3298095C600F98647 /* watchOSAppwriteTest Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -259,6 +273,9 @@
 				Base,
 			);
 			mainGroup = D35B74B6298095C600F98647;
+			packageReferences = (
+				D35B750A2980A5FB00F98647 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D35B74BE298095C600F98647 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +302,7 @@
 			files = (
 				D35B74D0298095C700F98647 /* Preview Assets.xcassets in Resources */,
 				D35B74CD298095C700F98647 /* Assets.xcassets in Resources */,
+				D35B74FA2980A39A00F98647 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +706,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D35B750A2980A5FB00F98647 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D35B750B2980A5FB00F98647 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D35B750A2980A5FB00F98647 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D35B750D2980A5FB00F98647 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D35B750A2980A5FB00F98647 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		D35B750F2980A5FB00F98647 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D35B750A2980A5FB00F98647 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D35B74B7298095C600F98647 /* Project object */;
 }
